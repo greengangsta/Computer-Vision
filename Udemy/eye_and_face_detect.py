@@ -23,11 +23,11 @@ def detect(gray,frame) :
 
 video_capture = cv2.VideoCapture(0)
 while True :
- _,frame = video_capture.read()
+ _, frame = video_capture.read()
  gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
- canvas = detect (gray,frame)
- cv2.imshaw('Video',canvas)
- if cv2.waitKey(1) & 0xFF==ord('q') :
+ canvas = detect(gray,frame)
+ cv2.imshow('Video',canvas)
+ if cv2.waitKey(1) & 0xFF == ord('q') :
   break
 video_capture.release()
 cv2.destroyAllWindows()	 
